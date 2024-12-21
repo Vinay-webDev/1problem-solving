@@ -10,8 +10,36 @@ class Solution:
                     return True
         return False
 sol = Solution()
+# print(sol.containsDuplicates(nums1))  #True
+# print(sol.containsDuplicates(nums2))  #True
+# print(sol.containsDuplicates(nums3))  #False
+
+
+class Solution:
+    def containsDuplicates(self, nums):
+        if (len(set(nums)) == len(nums)):
+            return False
+        else:
+            return True
+sol = Solution()
+# print(sol.containsDuplicates(nums1))  #True
+# print(sol.containsDuplicates(nums2))  #True
+# print(sol.containsDuplicates(nums3))  #False
+
+class Solution:
+    def containsDuplicates(self, nums):
+        Map = {}
+        for num in nums:
+            if num in Map:
+                return True
+            else:
+                Map[num] = 1
+        return False
+sol = Solution()
 print(sol.containsDuplicates(nums1))  #True
 print(sol.containsDuplicates(nums2))  #True
 print(sol.containsDuplicates(nums3))  #False
+
+
 
 
