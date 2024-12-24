@@ -15,5 +15,27 @@ sol = Solution()
 # print(sol.missingNumber(nums2))     #3
 # print(sol.missingNumber(nums3))     #2
 
+class Solution:
+    def missingNumber(self, nums):
+        total = 0
+        actual_total = 0
+        for i in range(len(nums) + 1):
+            total += i
+        for j in range(len(nums)):
+            actual_total += nums[j]
+        return total - actual_total
+sol = Solution()
+print(sol.missingNumber(nums1))     #2
+print(sol.missingNumber(nums2))     #3
+print(sol.missingNumber(nums3))     #2
+
+
+
+
+
+
+
+
+
 
 
