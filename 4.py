@@ -28,4 +28,19 @@ print(sol.twoSum(nums1, target1))   #[1, 0]
 print(sol.twoSum(nums2, target2))   #[2, 1]
 
 
+"""another optimal solution from leetcode"""
+class Solution:
+    def twoSum(self, nums, target):
+        d0=defaultdict(list)
+        for i in range(len(nums)):
+            d0[nums[i]].append(i)
+        while 1:
+            kn = [*d0.keys()][-1]
+            
+            v = d0.pop(kn)
+            if kn*2 == target and len(v) > 1:
+                return v
+
+            if target-kn in d0.keys() :
+                return [v[0],d0[target-kn][0]]
 
