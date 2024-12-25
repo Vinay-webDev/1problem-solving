@@ -8,15 +8,15 @@ class Solution:
         max_area = 0
         while l < r:
             w = r - l
-            h = height[l] if height[l] < height[r] else height[r]
+            h = min(height[l], height[r])
             current_max_area = h * w
             max_area = max(max_area, current_max_area)
-            if height[l] == height[r]:
-                l = l + 1
-                r = r - 1
-            elif height[l] < height[r]:
+            if height[l] < height[r]: 
                 l = l + 1
             else:
                 r = r - 1
         return max_area
+sol = Solution()
+print(sol.maxArea(height1)) #49
+print(sol.maxArea(height2)) #1
 
