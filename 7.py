@@ -3,8 +3,7 @@ height1 = [1,8,6,2,5,4,8,3,7]
 height2 = [1,1]
 class Solution:
     def maxArea(self, height):
-        l = 0
-        r = len(height) - 1
+        l, r = 0, len(height) - 1
         max_area = 0
         while l < r:
             w = r - l
@@ -20,3 +19,7 @@ sol = Solution()
 print(sol.maxArea(height1)) #49
 print(sol.maxArea(height2)) #1
 
+
+
+
+        
