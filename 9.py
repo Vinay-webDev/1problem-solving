@@ -15,6 +15,7 @@ nums1 = [-4,-1,0,3,10]
 nums2 = [-7,-3,2,3,11]
 nums3 = []
 nums4 = [1, 2, 3, 4]
+nums5 = [-5,-3,-2,-1]
 class Solution:
     def sortedSquares(self, nums):
         #edge cases
@@ -29,6 +30,7 @@ class Solution:
                 s = i
                 break
         a, b = nums[:s:1][::-1], nums[s:] 
+        a = [n * -1 for n in a]
         res = []
         l, r = 0, 0
         while l < len(b) and r < len(a):
@@ -50,6 +52,8 @@ print(sol.sortedSquares(nums1)) #[0, 1, 9, 16, 100]
 print(sol.sortedSquares(nums2)) #[4, 9, 9, 49, 121]
 print(sol.sortedSquares(nums3)) #[]
 print(sol.sortedSquares(nums4)) #[1, 4, 9, 16]
+print(sol.sortedSquares(nums5)) #[25, 9, 4, 1]  wrong answer
+#❌❌❌Wrong Answer❌❌❌
 
 
 
