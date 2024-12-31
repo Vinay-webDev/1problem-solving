@@ -1,5 +1,6 @@
 """SLIDING WINDOW"""
 """FIXED WINDOW LENGTH"""
+"""Maximum Average Subarray I"""
 nums1, k1 = [1,12,-5,-6,50,3], 4
 nums2, k2 = [5], 1
 nums3, k3 = [1,2,3,1,2,3], 3
